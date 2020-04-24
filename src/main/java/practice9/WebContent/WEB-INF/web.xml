@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+
+	<display-name>Practice9</display-name>
+	
+	<welcome-file-list>
+		<welcome-file>calc.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>CalcController</servlet-name>
+		<servlet-class>practice9.CalcController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CalcController</servlet-name>
+		<url-pattern>/calc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VoteController</servlet-name>
+		<servlet-class>practice9.VoteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>VoteController</servlet-name>
+		<url-pattern>/vote</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResultVoteController</servlet-name>
+		<servlet-class>practice9.ResultVoteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResultVoteController</servlet-name>
+		<url-pattern>/resultVote</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>list</param-name>
+		<param-value>Footbal Biathlon Basketball</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>practice9.ContextListener</listener-class>
+	</listener>
+</web-app>
